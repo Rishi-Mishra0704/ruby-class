@@ -13,7 +13,6 @@ puts "Capitalized Person Name: #{capitalized_person.correct_name}"
 capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
 puts "Capitalized and Trimmed Person Name: #{capitalized_trimmed_person.correct_name}"
 
-
 # Create a Person object
 person = Person.new(25)
 puts "Person ID: #{person.id}"
