@@ -1,6 +1,17 @@
 require_relative 'class/person'
 require_relative 'class/student'
 require_relative 'class/teacher'
+require_relative 'class/capitalize_decorator'
+require_relative 'class/trimmer_decorator'
+
+person = Person.new(22, name: 'maximilianus')
+puts "Person Name: #{person.correct_name}"
+
+capitalized_person = CapitalizeDecorator.new(person)
+puts "Capitalized Person Name: #{capitalized_person.correct_name}"
+
+capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
+puts "Capitalized and Trimmed Person Name: #{capitalized_trimmed_person.correct_name}"
 
 # Create a Person object
 person = Person.new(25)

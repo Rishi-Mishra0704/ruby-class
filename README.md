@@ -45,7 +45,7 @@
 ### Key Features <a name="key-features"></a>
 
 
-- **[Decode_morse_code]**
+- **[Objects-oriented]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -74,10 +74,9 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-
 Example commands:
   cd my-folder
-  git clone 
+  git clone git clone https://github.com/Rishi-Mishra0704/ruby-class.git
 
 
 ### Install
@@ -87,17 +86,17 @@ Install this project with:
 ### Usage
 
 To run the project, execute the following command:
-
+> ruby main.rb
 
 ### Run tests
 
 To run tests, run the following command:
-
+ no tests available
 
 ### Deployment
 
 You can deploy this project using:
-
+no deployment available
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -123,8 +122,10 @@ You can deploy this project using:
 
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-
+- **[Future Feature 1]**
+ Easy to use
+- **[Future Feature 2]**
+console based UI
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
