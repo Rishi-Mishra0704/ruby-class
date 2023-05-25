@@ -61,15 +61,15 @@ def create_person(app)
   puts "Enter the person's age:"
   age = gets.chomp.to_i
 
-  puts "Enter the person's type (teacher or student):"
+  puts 'Do you want to create a student(1) or a teacher(2)? [input the number]'
   type = gets.chomp
 
-  if type == 'teacher'
-    app.create_person(name, age, type)
-  elsif type == 'student'
+  if type == '2'
+    app.create_person(name, age, 'teacher')
+  elsif type == '1'
     puts "Enter the student's classroom:"
     classroom = gets.chomp
-    app.create_person(name, age, type, classroom)
+    app.create_person(name, age, 'student', classroom)
   else
     puts 'Invalid person type!'
   end
