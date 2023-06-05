@@ -13,5 +13,15 @@
     "person_name": "me",
     "person_age": 34,
     "person_type": "2"
+  },
+  {
+    "person_name": "peekaboo",
+    "person_age": 12,
+    "person_type": "1"
+  },
+  {
+    "person_name": "kim",
+    "person_age": 100,
+    "person_type": "2"
   }
 ]

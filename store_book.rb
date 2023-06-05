@@ -31,6 +31,6 @@ class StoreBook
   end
 
   def save_data
-    File.write('books.json', JSON.generate(@data))
+    File.write('books.json', JSON.pretty_generate(@data))
   end
 end

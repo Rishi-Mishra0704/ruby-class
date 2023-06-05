@@ -1,5 +1,4 @@
 require 'json'
-
 class StoreRental
   def initialize
     @data = load_data || []
@@ -31,6 +30,6 @@ class StoreRental
   end
 
   def save_data
-    File.write('rentals.json', JSON.generate(@data))
+    File.write('rentals.json', JSON.pretty_generate(@data))
   end
 end
