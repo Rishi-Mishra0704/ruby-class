@@ -31,11 +31,9 @@ class Person < Nameable
       Teacher.new(age, specialization, name)
     when 'student'
       Student.new(age, classroom, parent_permission: true, name: name)
-    else
-      nil
     end
   end
-  
+
   private
 
   def of_age?
