@@ -34,21 +34,19 @@ class RentalApp
   end
 
   def handle_choice(choice)
-    case choice
-    when 1
-      list_all_books
-    when 2
-      list_all_people
-    when 3
-      create_person
-    when 4
-      create_book
-    when 5
-      create_rental
-    when 6
-      list_rentals_for_person
-    when 7
-      quit
+    actions = {
+      1 => method(:list_all_books),
+      2 => method(:list_all_people),
+      3 => method(:create_person),
+      4 => method(:create_book),
+      5 => method(:create_rental),
+      6 => method(:list_rentals_for_person),
+      7 => method(:quit)
+    }
+
+    action = actions[choice]
+    if action
+      action.call
     else
       puts 'Invalid choice. Please try again.'
     end
@@ -117,4 +115,3 @@ class RentalApp
     # No action needed
   end
 end
-
