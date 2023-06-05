@@ -28,23 +28,23 @@ class App
   end
 
   def create_person(name, age, type, specialization = nil, classroom = nil)
-    if type == 'teacher'
-      person = Teacher.new(age, specialization, name: name)
-    elsif type == 'student'
-      person = Student.new(age, classroom, name: name)
-    else
+    person = Person.create(name, age, type, specialization, classroom)
+    if person.nil?
       puts 'Invalid person type!'
-      return
+    else
+      @people << person
+      puts "Person created successfully. ID: #{person.id}"
     end
-
-    @people << person
-    puts "Person created successfully. ID: #{person.id}"
   end
 
   def create_book(title, author)
-    book = Book.new(title, author)
-    @books << book
-    puts 'Book created successfully.'
+    book = Book.create(title, author)
+    if book.nil?
+      puts 'Invalid book information!'
+    else
+      @books << book
+      puts 'Book created successfully.'
+    end
   end
 
   def create_rental(person_id, book_title, rental_date)

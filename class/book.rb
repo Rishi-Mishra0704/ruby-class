@@ -10,4 +10,8 @@ class Book
   def rent(person, date)
     Rental.new(date, self, person)
   end
+
+  def self.create(title, author)
+    Book.new(title, author)
+  end
 end
