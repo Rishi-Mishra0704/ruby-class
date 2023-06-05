@@ -1,8 +1,12 @@
 require_relative 'app'
+require_relative 'store_rental'
+require_relative 'store_book'
 
 class RentalApp
   def initialize
     @app = App.new
+    @storeRental = StoreRental.new
+    @storeBook = StoreBook.new
   end
 
   def run
@@ -89,6 +93,8 @@ class RentalApp
     author = gets.chomp
 
     @app.create_book(title, author)
+    book = { book_title: title, book_author: author }
+    @storeBook.add_book(book)
   end
 
   def create_rental
@@ -102,6 +108,8 @@ class RentalApp
     rental_date = gets.chomp
 
     @app.create_rental(person_id, book_title, rental_date)
+    rental = { person_id: person_id, book_title: book_title, rental_date: rental_date }
+    @storeRental.add_rental(rental)
   end
 
   def list_rentals_for_person
