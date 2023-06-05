@@ -1,12 +1,13 @@
 require_relative 'app'
 require_relative 'store_rental'
 require_relative 'store_book'
-
+require_relative 'store_person'
 class RentalApp
   def initialize
     @app = App.new
-    @storeRental = StoreRental.new
-    @storeBook = StoreBook.new
+    @store_rental = StoreRental.new
+    @store_book = StoreBook.new
+    @store_person = StorePerson.new
   end
 
   def run
@@ -58,22 +59,21 @@ class RentalApp
 
   def list_all_books
     @app.list_all_books
+    @store_book.view_book
   end
 
   def list_all_people
     @app.list_all_people
+    @store_person.view_persons
   end
 
   def create_person
     puts "Enter the person's name:"
     name = gets.chomp
-
     puts "Enter the person's age:"
     age = gets.chomp.to_i
-
     puts 'Do you want to create a student(1) or a teacher(2)? [input the number]'
     type = gets.chomp
-
     if type == '2'
       @app.create_person(name, age, 'teacher')
     elsif type == '1'
@@ -83,6 +83,8 @@ class RentalApp
     else
       puts 'Invalid person type!'
     end
+    person = { person_name: name, person_age: age, person_type: type }
+    @store_person.add_person(person)
   end
 
   def create_book
@@ -94,7 +96,7 @@ class RentalApp
 
     @app.create_book(title, author)
     book = { book_title: title, book_author: author }
-    @storeBook.add_book(book)
+    @store_book.add_book(book)
   end
 
   def create_rental
@@ -109,7 +111,7 @@ class RentalApp
 
     @app.create_rental(person_id, book_title, rental_date)
     rental = { person_id: person_id, book_title: book_title, rental_date: rental_date }
-    @storeRental.add_rental(rental)
+    @store_rental.add_rental(rental)
   end
 
   def list_rentals_for_person
@@ -117,6 +119,7 @@ class RentalApp
     person_id = gets.chomp.to_i
 
     @app.list_rentals_for_person(person_id)
+    @store_rental.view_rentals
   end
 
   def quit
