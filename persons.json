@@ -28,5 +28,20 @@
     "person_name": "2",
     "person_age": 2,
     "person_type": "2"
+  },
+  {
+    "person_name": "Rishi",
+    "person_age": 23,
+    "person_type": "1"
+  },
+  {
+    "person_name": "Rishi",
+    "person_age": 23,
+    "person_type": "2"
+  },
+  {
+    "person_name": "2",
+    "person_age": 2,
+    "person_type": "2"
   }
 ]

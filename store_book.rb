@@ -3,7 +3,6 @@ require 'json'
 class StoreBook
   def initialize
     @data = load_data || []
-    view_book
   end
 
   def add_book(book)
