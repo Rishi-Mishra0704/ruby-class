@@ -10,7 +10,12 @@ class StoreRental
   end
 
   def view_rentals
-    @data
+    @data.each do |rental|
+      puts "person id: #{rental['person_id']},
+      book title: #{rental['book_title']},
+      rental date: #{rental['rental_date']}"
+    end
+    puts '---'
   end
 
   private
