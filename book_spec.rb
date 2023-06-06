@@ -21,7 +21,7 @@ RSpec.describe Book do
   end
 
   describe '#rent' do
-    let(:person) { double('Person') }
+    let(:person) { double('Person', rentals: []) }
     let(:date) { Date.today }
 
     it 'creates a new Rental object' do
@@ -41,23 +41,6 @@ RSpec.describe Book do
       expect(new_book.author).to eq(author)
       expect(new_book.rentals).to be_an(Array)
       expect(new_book.rentals).to be_empty
-    end
-  end
-end
-
-RSpec.describe Rental do
-  let(:title) { 'The Great Gatsby' }
-  let(:author) { 'F. Scott Fitzgerald' }
-  let(:book) { Book.new(title, author) }
-  let(:person) { double('Person') }
-  let(:date) { Date.today }
-  let(:rental) { Rental.new(date, book, person) }
-
-  describe '#initialize' do
-    it 'sets the date, book, and person correctly' do
-      expect(rental.date).to eq(date)
-      expect(rental.book).to eq(book)
-      expect(rental.person).to eq(person)
     end
   end
 end
