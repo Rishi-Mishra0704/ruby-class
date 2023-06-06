@@ -25,10 +25,10 @@ class Person < Nameable
     Rental.new(date, book, self)
   end
 
-  def self.create(name, age, type, specialization = nil, classroom = nil)
+  def self.create(name, age, type, _specialization = nil, classroom = nil)
     case type
     when 'teacher'
-      Teacher.new(age, specialization, name)
+      Teacher.new(age, name)
     when 'student'
       Student.new(age, classroom, parent_permission: true, name: name)
     end
