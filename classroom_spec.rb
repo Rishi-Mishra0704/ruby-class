@@ -1,9 +1,10 @@
 require 'rspec'
 require_relative 'class/classroom'
 require_relative 'class/student'
+
 RSpec.describe Classroom do
   let(:classroom) { Classroom.new('Math') }
-  let(:student) { Student.new('John', true) }
+  let(:student) { Student.new('John') }
 
   describe '#initialize' do
     it 'sets the label and initializes an empty students array' do

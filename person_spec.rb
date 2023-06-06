@@ -69,7 +69,7 @@ RSpec.describe Person do
 
   describe '.create' do
     context 'when creating a teacher' do
-      let(:teacher_name) { 'Jane Smith' }
+      let(:teacher_name) { 'Teacher' }
       let(:teacher_age) { 35 }
       let(:teacher) { Person.create(teacher_name, teacher_age, 'teacher') }
 
