@@ -11,7 +11,10 @@ class StorePerson
   end
 
   def view_persons
-    @data
+    @data.each do |person|
+      puts "Name: #{person['person_name']}, Age: #{person['person_age']}, Type: #{person['person_type']}"
+    end
+    puts '---'
   end
 
   private

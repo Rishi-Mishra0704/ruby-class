@@ -23,5 +23,10 @@
     "person_name": "kim",
     "person_age": 100,
     "person_type": "2"
+  },
+  {
+    "person_name": "2",
+    "person_age": 2,
+    "person_type": "2"
   }
 ]
