@@ -1,4 +1,4 @@
-require_relative 'class/teacher'
+require_relative '../class/teacher'
 
 RSpec.describe Teacher do
   let(:age) { 35 }

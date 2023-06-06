@@ -1,7 +1,7 @@
 require 'rspec'
-require_relative 'class/book'
+require_relative '../class/book'
 require 'date'
-require_relative 'class/rental'
+require_relative '../class/rental'
 
 RSpec.describe Book do
   let(:title) { 'The Great Gatsby' }

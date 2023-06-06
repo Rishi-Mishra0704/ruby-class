@@ -1,7 +1,7 @@
 require 'rspec'
-require_relative 'class/person'
-require_relative 'class/student'
-require_relative 'class/classroom'
+require_relative '../class/person'
+require_relative '../class/student'
+require_relative '../class/classroom'
 
 RSpec.describe Student do
   let(:age) { 15 }
